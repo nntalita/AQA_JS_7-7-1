@@ -9,8 +9,7 @@ describe("When user should is on login page, user", () => {
 
   it("Should be able to login with correct email and password", () => {
     cy.login(userName[0].email, userName[0].password);
-    cy.title().should("eq", "ИдёмВКино");
-    cy.get(".page-header__subtitle").should("have.text", "Администраторррская");
+    cy.contains("Управление залами").should("be.visible");
   });
 
   it("Should not be able to login with correct email and uncorrect password", () => {
