@@ -1,0 +1,14 @@
+{
+  "name": "7-7-1",
+  "version": "1.0.0",
+  "description": "Cypress 2",
+  "main": "index.js",
+  "scripts": {
+    "cy:dash": "cypress run --record --key 9bd6c09a-7e1e-4583-929e-b0662ad00847"
+  },
+  "author": "N.Pletneva",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^9.6.1"
+  }
+}
