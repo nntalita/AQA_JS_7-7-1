@@ -1,6 +1,8 @@
+const selector = require("../fixtures/generalElements.json");
+
 describe("Should check the correctness of the main page display", () => {
   beforeEach(() => {
-    cy.visit("http://qamid.tmweb.ru");
+    cy.visit("/");
   });
 
   it("title is correct", () => {
@@ -8,10 +10,10 @@ describe("Should check the correctness of the main page display", () => {
   });
 
   it("show correct number of days", () => {
-    cy.get(".page-nav__day").should("have.length", 7);
+    cy.get(selector.week).should("have.length", 7);
   });
 
   it("movies are offered", () => {
-    cy.get(".movie").should("to.exist");
+    cy.get(selector.movie).should("to.exist");
   });
 });

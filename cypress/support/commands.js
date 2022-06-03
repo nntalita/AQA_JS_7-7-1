@@ -1,9 +1,9 @@
-const selector = require("../fixtures/loginSelectors.json");
+const selector = require("../fixtures/generalElements.json");
     
 Cypress.Commands.add("login", (email, password) => {
   cy.get(selector.login).type(email);
   cy.get(selector.pwd).type(password);
-  cy.get(".login__button").click();
+  cy.get(selector.loginButton).click();
 });
 
 Cypress.Commands.add("booking", (day, text, seats) => {

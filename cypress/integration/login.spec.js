@@ -1,10 +1,9 @@
 const userName = require("../fixtures/login.json");
-const selector = require("../fixtures/loginSelectors.json");
-const selectorError = require("../fixtures/authorizationError.json");
+const selector = require("../fixtures/generalElements.json");
 
 describe("When user should is on login page, user", () => {
   beforeEach(() => {
-    cy.visit("http://qamid.tmweb.ru/admin");
+    cy.visit("/admin");
   });
 
   it("Should be able to login with correct email and password", () => {
@@ -14,7 +13,7 @@ describe("When user should is on login page, user", () => {
 
   it("Should not be able to login with correct email and uncorrect password", () => {
     cy.login(userName[1].email, userName[1].password);
-    cy.get(selectorError.place)
+    cy.get(selector.place)
       .then(($el) => $el[0].validationMessage)
       .should("contain", "Ошибка авторизации");
   });

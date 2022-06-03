@@ -1,4 +1,0 @@
-{
-  "login": "[for=\"email\"] > .login__input",
-  "pwd": "[for=\"pwd\"] > .login__input"
-}

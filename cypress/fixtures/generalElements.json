@@ -1,0 +1,11 @@
+{
+    "place": "body",
+    "button": ".acceptin-button",
+    "login": "[for=\"email\"] > .login__input",
+    "pwd": "[for=\"pwd\"] > .login__input",
+    "hall": ".conf-step__list > :nth-child(1)",
+    "week": ".page-nav__day",
+    "movie": ".movie",
+    "loginButton": ".login__button"
+    
+}
